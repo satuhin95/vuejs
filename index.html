@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Vue Js</title>
+</head>
+<body>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+	<a :href="url">Google</a>
+	<h2>{{name}}-{{age}}</h2>
+	<button @click="age++">Increment</button>
+	<button @click="age--">Decrement</button>
+	<button @click="changeTitle">Change Title</button>
+
+	<h1>{{condition}}</h1>
+
+
+	<button @click="toggleShow">{{condition?'Hide':"Show"}}</button>
+
+
+	<div>
+		<p>Total Books: {{totalBook}}</p>
+		<ul>
+			<li v-for="(item,index) in books" key="index">Name:{{item.name}} - Price :{{item.price}}</li>
+		</ul>
+	</div>
+
+
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
